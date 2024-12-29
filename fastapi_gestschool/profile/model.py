@@ -9,7 +9,7 @@ from sqlalchemy import (
     Table,
 )
 from fastapi_gestschool.settings.database import Base
-from fastapi_gestschool.teacher.model import Teacher
+from fastapi_gestschool.teacher import Teacher
 from sqlalchemy.sql import func
 from sqlalchemy.orm import relationship
 class Profile(Base):
@@ -18,7 +18,7 @@ class Profile(Base):
     age=Column(Integer,index=True,nullable=False)
     gender=Column(String,index=True,nullable=False)
     birth_date=Column(DateTime)
-    teacher_id=Column(Integer,ForeignKey('users.id'))
+    teacher_id=Column(Integer,ForeignKey('teachers.id'))
     teacher=relationship("Teacher",back_populates="profile")
 
 
