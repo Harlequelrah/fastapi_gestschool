@@ -1,1 +1,1 @@
-from .model import Teacher
+from .model import Teacher,metadata

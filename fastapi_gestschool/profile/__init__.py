@@ -1,1 +1,1 @@
-from .model import Profile
+from .model import Profile , metadata
