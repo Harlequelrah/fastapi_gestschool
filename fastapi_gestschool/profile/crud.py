@@ -7,6 +7,6 @@
 # from sqlalchemy.orm import Session
 # from harlequelrah_fastapi.utility.utils import update_entity
 
-from harlequelrah_fastapi.crud.crud_model import CrudForgery
+from harlequelrah_fastapi.crud.crud_forgery import CrudForgery
 from .model import Profile
 from .schema import ProfiePydanticModel
