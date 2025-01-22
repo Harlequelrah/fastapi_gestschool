@@ -18,7 +18,7 @@ class TeacherUpdateModel(BaseModel):
 
 class TeacherPydanticModel(TeacherCreateModel):
     id : int
-    profil : Optional[ProfileMetaModel]
+    profile : Optional[ProfileMetaModel]
 
 class TeacherMetaModel(BaseModel):
     email:str
