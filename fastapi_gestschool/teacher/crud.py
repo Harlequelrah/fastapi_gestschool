@@ -1,10 +1,16 @@
-# from fastapi.responses import JSONResponse
-# from sqlalchemy.sql import func
-# from fastapi import HTTPException, status, Depends, Response
-# from harlequelrah_fastapi.exception.custom_http_exception import CustomHttpException
-# from myrpoject.myapp.model import MyModel
-# from myproject.myapp.schema import MyCreateModel, MyUpdateModel
-# from sqlalchemy.orm import Session
-# from harlequelrah_fastapi.utility.utils import update_entity
 
-
+from fastapi_gestschool.teacher.model import Teacher
+from fastapi_gestschool.teacher.schema import TeacherCreateModel,TeacherUpdateModel
+from harlequelrah_fastapi.crud.crud_forgery import CrudForgery
+from fastapi_gestschool.settings.database import authentication
+from fastapi_gestschool.profile import Profile
+teacher_crud = CrudForgery(
+    entity_name="teacher",
+    authentication=authentication,
+    SQLAlchemyModel=Teacher,
+    CreatePydanticModel=TeacherCreateModel,
+    UpdatePydanticModel=TeacherUpdateModel,
+    Linked_Classes=[
+        {'profile':Profile}
+    ]
+)

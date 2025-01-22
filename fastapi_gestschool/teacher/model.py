@@ -18,5 +18,5 @@ class Teacher(Base):
     email=Column(String(30),unique=True,index=True)
     firstname=Column(String(50),nullable=False)
     lastname=Column(String(30),nullable=False)
-    profil= relationship("Profile",back_populates="teacher",uselist=False)
+    profile= relationship("Profile",back_populates="teacher",uselist=False)
 metadata = Base.metadata

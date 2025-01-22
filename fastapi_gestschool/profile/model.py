@@ -1,13 +1,9 @@
 from sqlalchemy import (
-    Boolean,
     Column,
-    DECIMAL,
     Enum,
     Integer,
-    String,
     DateTime,
     ForeignKey,
-    Table,
     Enum
 )
 from fastapi_gestschool.settings.database import Base
