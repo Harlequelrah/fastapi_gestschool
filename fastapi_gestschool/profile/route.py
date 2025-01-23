@@ -1,6 +1,6 @@
 from fastapi_gestschool.profile.crud import profile_crud
 from fastapi_gestschool.profile.schema import ProfilePydanticModel
-from harlequelrah_fastapi.router.router_provider import CustomRouterProvider
+from elrahapi.router.router_provider import CustomRouterProvider
 
 router_provider= CustomRouterProvider(
     prefix="/profiles",

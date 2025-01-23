@@ -1,6 +1,6 @@
 from fastapi_gestschool.teacher.crud import teacher_crud
 from fastapi_gestschool.teacher.schema import TeacherPydanticModel
-from harlequelrah_fastapi.router.router_provider import CustomRouterProvider
+from elrahapi.router.router_provider import CustomRouterProvider
 
 router_provider= CustomRouterProvider(
     prefix="/teachers",
