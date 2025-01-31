@@ -25,7 +25,7 @@ class ProfilePydanticModel(BaseModel):
     birth_date:datetime
     teacher_id:int
     class setting :
-        from_orm=True
+        from_attributes=True
 
 class ProfileMetaModel(BaseModel):
     age:int
